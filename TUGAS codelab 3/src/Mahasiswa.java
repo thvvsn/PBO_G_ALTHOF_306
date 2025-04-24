@@ -1,0 +1,22 @@
+public class Mahasiswa extends User{
+    public Mahasiswa (String nama, String nim){
+        super(nama, nim);
+    }
+
+    @Override
+    public void login(String nama, String nim){
+        if (nama.equals(getNama())) {
+            if (nim.equals(getNim())) {
+                displayinfo();
+            }
+        }else{
+            System.out.println("Login gagal! Nama atau NIM salah");
+        }
+    }
+    public void displayinfo(){
+        System.out.println("Login Mahasiswa Berhasil!!");
+        System.out.println("Nama: "+ getNama());
+        System.out.println("NIM: "+ getNama());
+    }
+
+}
